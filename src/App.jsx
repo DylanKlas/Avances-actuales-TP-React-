@@ -11,30 +11,30 @@ import CartContainer from "./components/CartContainer";
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ShoppingCartContext from "./context/ShoppingCartContext";
-import ComponenteA from "./components/ComponenteA";
+// import ShoppingCartContext from "./context/ShoppingCartContext";
+// import ComponenteA from "./components/ComponenteA";
 
 function App() {
   return (
     <>
-      <ShoppingCartContext>
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <ComponenteA />
-            <Route exact path="/" element={<ItemDetailContainer />} />
-            <Route
-              exact
-              path="/category/:categoria"
-              element={<ItemDetailContainer />}
-            />
-            {/* o ItemListContainer */}
-            <Route exact path="/item/:id" element={<Detail />} />
-            {/* o Item */}
-            <Route exact path="/cart" element={<CartContainer />} />
-          </Routes>
-        </BrowserRouter>
-      </ShoppingCartContext>
+      {/* <ShoppingCartContext> */}
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          {/* <ComponenteA /> */}
+          <Route exact path="/" element={<ItemDetailContainer />} />
+          <Route
+            exact
+            path="/category/:categoria"
+            element={<ItemDetailContainer />}
+          />
+          {/* o ItemListContainer */}
+          <Route exact path="/item/:id" element={<Detail />} />
+          {/* o Item */}
+          <Route exact path="/cart" element={<CartContainer />} />
+        </Routes>
+      </BrowserRouter>
+      {/* </ShoppingCartContext> */}
     </>
   );
 }
